@@ -1,0 +1,30 @@
+<script type='text/template' id='user'>
+    <div class='form-group'>
+        <form role='form' id='userForm'>
+ 
+            <div class='form-group' >
+                <label for='firstName'>Nombres</label>
+                <input type='text' class='form-control' id='firstName' name='firstName' placeholder='Enter value' value='<%= user.get('firstName') %>'/>	
+            </div>
+ 
+            <div class='form-group' >
+                <label for='lastName'>Apellidos</label>
+                <input type='text' class='form-control' id='lastName' name='lastName' placeholder='Enter value' value='<%= user.get('lastName') %>'/>	
+            </div>
+            
+            <div class='form-group' >
+                <label for='birthday'>Cumpleaños</label>
+                <input type='text' class='form-control' id='birthday' name='birthday' onclick="Backbone.trigger('user-calendar'); return false" placeholder='Enter value' value='<%= user.get('birthday') %>'/>	
+            </div>
+
+    
+            <a onclick="Backbone.trigger('user-save'); return false" >Guardar</a> |
+            <a onclick="Backbone.trigger('user-cancel'); return false" >Cancelar</a> |
+        </form>
+    </div>
+    
+    <div class="col-sm-4 col-sm-offset-4" id="msj">
+    
+    </div>
+    
+</script> 
